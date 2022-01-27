@@ -39,7 +39,7 @@ app.post("/login", (req, res) => {
   const password = req.body.password;
 
   pool.query(
-    "SELECT * FROM users WHERE useremail = ?;",
+    "SELECT * FROM faculty WHERE useremail = ?;",
     useremail,
     (err, result) => {
       if (err) {
