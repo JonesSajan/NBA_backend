@@ -11,6 +11,9 @@ var facultyRouter = require('./routes/faculty');
 var studentRouter = require('./routes/student');
 var midterm_1Router = require('./routes/midterm_1');
 var midterm_2Router = require('./routes/midterm_2');
+var activityRouter = require('./routes/activity');
+var quizRouter = require('./routes/quiz');
+var extrasRouter = require('./routes/extras');
 
 var app = express();
 
@@ -31,6 +34,9 @@ app.use('/faculty', facultyRouter);
 app.use('/student', studentRouter);
 app.use('/midterm1', midterm_1Router);
 app.use('/midterm2', midterm_2Router);
+app.use('/activity', activityRouter);
+app.use('/quiz', quizRouter);
+app.use('/extras', extrasRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
